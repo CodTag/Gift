@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Special Gift Just for You</title>
+    <style>
+        body {
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background: url('./love.jpeg') no-repeat center center fixed;
+            background-size: cover;
+        }
+        .container {
+            text-align: center;
+            background: rgba(255, 255, 255, 0.8); /* Semi-transparent background */
+            padding: 40px 30px;
+            border-radius: 12px;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+            max-width: 400px;
+            margin: 20px; /* Margin around the container */
+            backdrop-filter: blur(10px); /* Glass effect */
+            -webkit-backdrop-filter: blur(10px); /* For Safari */
+            display: flex;
+            flex-direction: column;
+            align-items: center; /* Center children horizontally */
+            justify-content: center; /* Center children vertically */
+            height: auto; /* Adjust height based on content */
+        }
+        h1 {
+            display: none;
+            color: #ff6f61;
+            font-size: 2.2em;
+            margin-bottom: 10px;
+        }
+        h2 {
+            color: #ff6f61;
+            font-size: 2.2em;
+            margin-bottom: 10px;
+        }
+        p {
+            color: #333;
+            font-size: 1.1em;
+            margin-bottom: 20px;
+        }
+        .gift-video {
+            display: none;
+            width: 100%;
+            max-width: 300px;
+            margin: 20px 0;
+            border-radius: 12px;
+        }
+        .button {
+            display: inline-block;
+            padding: 12px 25px;
+            font-size: 1.1em;
+            color: white;
+            background-color: #ff6f61;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+        }
+        .button:hover {
+            background-color: #e55a50;
+        }
+        .productName {
+            display: none;
+        }
+        .special-message, .special-message1, .special-message2 {
+            font-size: 1.2em;
+            color: #555;
+            margin-top: 20px;
+            font-style: italic;
+        }
+        @media (max-width: 600px) {
+            .container {
+                padding: 20px;
+                margin: 10px;
+            }
+            p, .button {
+                font-size: 1em;
+            }
+        }
+    </style>
+    <script>
+        function showVideo() {
+            var videoElement = document.getElementById('giftVideo');
+            var buttonElement = document.querySelector('.button');
+            var productContentElement = document.querySelector('.productName');
+            var specialMessageElement = document.querySelector('.special-message');
+            var specialMessage1Element = document.querySelector('.special-message1');
+            var specialMessage2Element = document.querySelector('.special-message2');
+            var headingMessageElement = document.querySelector('.headingMesssage');
+            var headingElement = document.querySelector('.heading');
+            var heading2Element = document.querySelector('.heading2');
+            
+            if (videoElement && buttonElement && productContentElement) {
+                videoElement.style.display = 'block';
+                videoElement.play();
+                buttonElement.style.display = 'none';
+                productContentElement.style.display = 'block';
+                specialMessageElement.style.display = 'none';
+                specialMessage1Element.style.display = 'none';
+                specialMessage2Element.style.display = 'none';
+                headingMessageElement.style.display = 'none';
+                headingElement.style.display = 'block';
+                heading2Element.style.display = 'none';
+            } else {
+                console.error('One or more elements not found.');
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h1 class="heading">Surprise, My Love!</h1>
+        <h2 class="heading2">A Special Moment for You, My Dudy</h2>
+        <p class="headingMesssage">I have something incredibly special just for you.</p>
+        <video id="giftVideo" class="gift-video" controls>
+            <source src="boat.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <p class="productName">Hope you love your new auditory jewels! 💖</p>
+        <p class="special-message">
+            You are my world 🌍, the heartbeat of my life ❤️, and I can’t imagine a single day without you. Your presence fills my life with joy 😊 and meaning, and I am profoundly grateful for every moment we share 🙏.
+        </p>
+        <p class="special-message1">
+            Let’s get ready for a little celebration 🎉! Press the button below and get ready for a delightful surprise 🎁 that I hope will bring a smile to your face 😄 and joy to your heart 💖.
+        </p>
+        <p class="special-message2">
+            Thank you for being the amazing person you are. I’m so fortunate to share my life with you 💑.
+        </p>
+        <button class="button" onclick="showVideo()">Press to Reveal Your Surprise!</button>
+    </div>
+</body>
+</html>
