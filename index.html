@@ -18,11 +18,11 @@
         .container {
             text-align: center;
             background: rgba(255, 255, 255, 0.8); /* Semi-transparent background */
-            padding: 40px 30px;
+            padding: 20px; /* Adjusted padding for better responsiveness */
             border-radius: 12px;
             box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
-            max-width: 400px;
-            margin: 20px; /* Margin around the container */
+            max-width: 90vw; /* Responsive max-width */
+            margin: 20px;
             backdrop-filter: blur(10px); /* Glass effect */
             -webkit-backdrop-filter: blur(10px); /* For Safari */
             display: flex;
@@ -31,21 +31,15 @@
             justify-content: center; /* Center children vertically */
             height: auto; /* Adjust height based on content */
         }
-        h1 {
-            display: none;
+        h1, h2 {
             color: #ff6f61;
-            font-size: 2.2em;
-            margin-bottom: 10px;
-        }
-        h2 {
-            color: #ff6f61;
-            font-size: 2.2em;
+            font-size: 2em; /* Responsive font size */
             margin-bottom: 10px;
         }
         p {
             color: #333;
-            font-size: 1.1em;
-            margin-bottom: 20px;
+            font-size: 1em; /* Responsive font size */
+            margin-bottom: 15px;
         }
         .gift-video {
             display: none;
@@ -57,7 +51,7 @@
         .button {
             display: inline-block;
             padding: 12px 25px;
-            font-size: 1.1em;
+            font-size: 1em; /* Responsive font size */
             color: white;
             background-color: #ff6f61;
             border: none;
@@ -73,18 +67,41 @@
             display: none;
         }
         .special-message, .special-message1, .special-message2 {
-            font-size: 1.2em;
+            font-size: 1em; /* Responsive font size */
             color: #555;
             margin-top: 20px;
             font-style: italic;
         }
-        @media (max-width: 600px) {
+        @media (max-width: 768px) {
             .container {
-                padding: 20px;
+                padding: 15px;
                 margin: 10px;
             }
-            p, .button {
-                font-size: 1em;
+            h1, h2 {
+                font-size: 1.8em;
+            }
+            p {
+                font-size: 0.9em;
+            }
+            .button {
+                font-size: 0.9em;
+                padding: 10px 20px;
+            }
+        }
+        @media (max-width: 480px) {
+            .container {
+                padding: 10px;
+                margin: 5px;
+            }
+            h1, h2 {
+                font-size: 1.5em;
+            }
+            p {
+                font-size: 0.8em;
+            }
+            .button {
+                font-size: 0.8em;
+                padding: 8px 15px;
             }
         }
     </style>
