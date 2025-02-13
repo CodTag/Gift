@@ -368,7 +368,7 @@
         }
 
         /* Hidden Card (Appears after button press) */
-        .card, .card2, .card3 {
+        .card2, .card3 {
             display: none;
             position: absolute;
             width: 90vw; /* Responsive width */
@@ -380,6 +380,22 @@
             padding: 20px;
             text-align: center;
             animation: fadeIn 0.5s ease-in-out;
+        }
+
+        .card {
+            display: none;
+            position: absolute;
+            width: 90vw; /* Responsive width */
+            max-width: 500px;
+            max-height: 80vh; /* Limit height to enable scrolling */
+            background: rgba(255, 255, 255, 0.8); /* Glass effect */
+            backdrop-filter: blur(10px);
+            border-radius: 15px;
+            box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
+            padding: 20px;
+            text-align: center;
+            animation: fadeIn 0.5s ease-in-out;
+            overflow-y: auto; /* Enables vertical scrolling */
         }
 
         /* Fade In Animation */
@@ -614,7 +630,7 @@
 
     <!-- Second Modal -->
     <div class="card2">
-        <h1>You Are My Everything ❤️</h1>
+        <h1>A Gift Hidden in Words 🎁</h1>
         <p>I move with it, yet it stands still,  
             It measures time with perfect skill. 💞</p>
 
@@ -629,7 +645,7 @@
     <!-- Celebration Modal -->
     <div class="card3">
         <h1>Congratulations! 🎉</h1>
-        <p>You guessed it right! Here's a big hug and lots of love! ❤️💖</p>
+        <p>Your special gift is waiting for you let’s go find it together! 🎁💖</p>
         <button class="close-button" onclick="closeCard3()">Close</button>
     </div>
 
